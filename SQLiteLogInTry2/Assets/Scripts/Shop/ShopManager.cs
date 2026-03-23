@@ -23,19 +23,23 @@ public class ShopManager : MonoBehaviour
         }
     }
 
-    public void TryBuyingItem(ItemScriptableObject itemScriptable, int price) { 
+    public void TryBuyingItem(ItemScriptableObject itemScriptable, int price)
+    {
         if (itemScriptable != null && inventoryManager.goldQuantity >= price)
         {
-            if (HasSpaceForItem(itemScriptable)) { 
+            if (HasSpaceForItem(itemScriptable))
+            {
                 inventoryManager.goldQuantity -= price;
                 inventoryManager.goldTextQuantity.text = inventoryManager.goldQuantity.ToString();
                 inventoryManager.AddItem(itemScriptable, 1);
             }
         }
+
     }
 
     private bool HasSpaceForItem(ItemScriptableObject itemScriptable)
     {
+
         foreach (var slot in inventoryManager.itemSlots)
         {
             if (slot.item == itemScriptable && slot.quantity < itemScriptable.stackSize)

@@ -10646,8 +10646,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allItemScriptables:
   - {fileID: 11400000, guid: a05ab4712c2c45549a2bb64d9b0d3867, type: 2}
+  - {fileID: 11400000, guid: 8c806e979f496cd43861ff03a7d3d1d7, type: 2}
   - {fileID: 11400000, guid: ab1c73c7623c820468710cf6e534509d, type: 2}
+  - {fileID: 11400000, guid: 6a4b0e9ece3361241919935d731f4fd3, type: 2}
   userInventory: []
+  inventoryManager: {fileID: 549497096}
 --- !u!1 &1735692675
 GameObject:
   m_ObjectHideFlags: 0
@@ -10843,6 +10846,8 @@ MonoBehaviour:
   shopItems:
   - itemsShop: {fileID: 11400000, guid: ab1c73c7623c820468710cf6e534509d, type: 2}
     priceItem: 2
+  - itemsShop: {fileID: 11400000, guid: 6a4b0e9ece3361241919935d731f4fd3, type: 2}
+    priceItem: 1
   shopWeapons:
   - itemsShop: {fileID: 11400000, guid: a05ab4712c2c45549a2bb64d9b0d3867, type: 2}
     priceItem: 3

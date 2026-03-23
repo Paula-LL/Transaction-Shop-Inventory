@@ -56,6 +56,7 @@ public class DatabaseCreation : MonoBehaviour
                 "CREATE TABLE IF NOT EXISTS Inventory(" +
                 "InventoryID INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "UserID INTEGER NOT NULL, "+
+                "GoldValue INTEGER, "+ //call to gold currenty in possession and save it.
                 "FOREIGN KEY(UserID) REFERENCES Users(UserID))";
 
         databaseCommandInventoryTableCreation.ExecuteNonQuery();//
@@ -78,8 +79,8 @@ public class DatabaseCreation : MonoBehaviour
                 "CREATE TABLE IF NOT EXISTS Contains(" +
                 "ItemID INTEGER," +
                 "InventoryID INTEGER,"+
-                "Primary Key(ItemID, InventoryID),"+
                 "ItemNumber INTEGER," +
+                "Primary Key(ItemID, InventoryID)," +
                 "FOREIGN KEY(InventoryID) REFERENCES Inventory(InventoryID)," +
                 "FOREIGN KEY(ItemID) REFERENCES Item(ItemID))";
 
